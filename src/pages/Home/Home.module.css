@@ -1,0 +1,546 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  font-family: sans-serif;
+  color: #1a1a1a;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 60px 0px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.heroTag {
+font-size: 24px;
+line-height: 133%;
+font-family: 'Crimson Pro';
+color: #0d0d0d;
+text-align: left;
+}
+
+.heroTitle {
+  font-size: 60px;
+line-height: 133%;
+font-family: 'Crimson Pro';
+color: #0d0d0d;
+text-align: left;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.sectionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionLabel {
+  position: relative;
+  font-size: 18px;
+  line-height: 133%;
+  font-family: 'Crimson Pro';
+  color: #0d0d0d;
+  text-align: left;
+}
+
+.sectionTitle {
+  position: relative;
+  font-size: 34px;
+  line-height: 133%;
+  font-family: 'Crimson Pro';
+  color: #0d0d0d;
+  text-align: left;
+}
+
+.bodyText {
+  width: 100%;
+position: relative;
+font-size: 16px;
+line-height: 161.8%;
+font-family: Inter;
+color: #404040;
+text-align: left;
+display: inline-block;
+}
+
+.paragraph {
+  width: 100%;
+position: relative;
+font-size: 16px;
+line-height: 161.8%;
+font-family: Inter;
+color: #404040;
+text-align: left;
+display: inline-block;
+}
+
+.outcomeText {
+  margin: 0 0 12px;
+  font-style: italic;
+}
+
+.imageWrapper {
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image8Parent {
+  width: 100%;
+  height: 742px;
+  position: relative;
+  border-radius: 12px;
+  background-color: #E6E4E0;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.image8Icon {
+  align-self: stretch;
+  width: 930.9px;
+  position: relative;
+  box-shadow: -2px -2px 8px #faf9f5, 12px 8px 36px -4px rgba(166, 166, 162, 0.24);
+  border-radius: 12px;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.image6Parent {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0px 60px;
+  box-sizing: border-box;
+  gap: 40px;
+  text-align: left;
+  font-size: 34px;
+  color: #404040;
+  font-family: 'Crimson Pro';
+}
+
+.image6Icon {
+  height: 580px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.theActualProblemHadThreeCParent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+}
+
+.theActualProblem {
+  max-width: 488px;
+  position: relative;
+  line-height: 133%;
+  display: inline-block;
+}
+
+.frameParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 21px;
+  color: #0d0d0d;
+}
+
+.silentDeteriorationParent {
+  align-self: stretch;
+  border-bottom: 0.6px dashed #b0b0b0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 0px;
+  gap: 10px;
+  transition: background-color 0.2s ease;
+  border-radius: 4px;
+}
+
+.silentDeteriorationParent:hover {
+  background-color: rgba(0, 0, 0, 0.018);
+}
+
+.silentDeterioration {
+  align-self: stretch;
+  position: relative;
+  line-height: 161.8%;
+  font-weight: 500;
+}
+
+.stageAmountAnd {
+  align-self: stretch;
+  position: relative;
+  font-size: 16px;
+  line-height: 161.8%;
+  font-family: Inter;
+  color: #404040;
+}
+
+
+.accordionHeader {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+
+.accordionHeader:hover {
+  opacity: 0.65;
+}
+
+.accordionToggle {
+  font-size: 18px;
+  color: #b0b0b0;
+  font-family: Inter, sans-serif;
+  font-weight: 300;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-left: 16px;
+}
+
+.accordionBody {
+  padding-top: 4px;
+  animation: accordionIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes accordionIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.quoteBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quote {
+  font-size: 17px;
+  font-style: italic;
+  border-left: 3px solid #ccc;
+  padding-left: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.dealDecayIs {
+  width: 100%;
+  position: relative;
+  font-size: 34px;
+  line-height: 133%;
+  font-family: 'Crimson Pro';
+  color: #404040;
+  text-align: center;
+  display: inline-block;
+}
+
+.quoteLabel {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+}
+
+.readLink {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: underline;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: opacity 0.25s ease, letter-spacing 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.readLink:hover {
+  opacity: 0.5;
+  letter-spacing: 0.14em;
+}
+
+.cardsTrack {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100vw;
+  position: relative;
+  left: calc(50% - 50vw);
+  padding: 8px 60px 40px max(24px, calc((100vw - 900px) / 2 + 24px));
+  cursor: grab;
+  scrollbar-width: none;
+}
+
+.cardsTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 520px;
+  scroll-snap-align: start;
+  position: relative;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 48px;
+  box-sizing: border-box;
+  gap: 28px;
+  text-align: left;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.10);
+}
+
+.cardIndex {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #b0b0ac;
+  font-family: Inter, sans-serif;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  font-size: 24px;
+  line-height: 133%;
+  font-weight: 500;
+  font-family: 'Crimson Pro', serif;
+  color: #0d0d0d;
+}
+
+.cardBody {
+  font-size: 15px;
+  line-height: 161.8%;
+  font-family: Inter, sans-serif;
+  color: #404040;
+  flex: 1;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    flex: 0 0 70vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    flex: 0 0 80vw;
+    padding: 32px;
+  }
+  .cardsTrack {
+    padding: 8px 20px 32px max(24px, calc((100vw - 900px) / 2 + 24px));
+    gap: 16px;
+  }
+}
+
+.principlesContainer {
+  width: min(1320px, 100vw);
+  position: relative;
+  left: calc(50% - min(660px, 50vw));
+}
+
+.principlesList {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.principleRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.principleRowReversed {
+  flex-direction: row-reverse;
+}
+
+.principleText {
+  flex: 0 0 calc(35% - 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.principleVisual {
+  flex: 0 0 calc(65% - 20px);
+  height: 603.2px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 40px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.principleImage {
+  align-self: stretch;
+  height: 425.2px;
+  width: auto;
+  position: relative;
+  border-radius: 12px;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+
+@media (max-width: 640px) {
+  .principleRow,
+  .principleRowReversed {
+    flex-direction: column;
+    min-height: unset;
+  }
+
+  .principleText {
+    flex: none;
+  }
+
+  .principleVisual {
+    min-height: 200px;
+  }
+}
+
+.decisionTitle {
+  font-size: 21px;
+  line-height: 161.8%;
+  font-weight: 500;
+  font-family: 'Crimson Pro';
+  color: #0d0d0d;
+}
+
+.decisionBody {
+  font-size: 16px;
+  line-height: 161.8%;
+  color: #404040;
+}
+
+
+.subHeader {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.reflectionGrid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.reflectionRow {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  gap: 120px;
+}
+
+.reflectionItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.vectorWrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.3px;
+  box-sizing: border-box;
+}
+
+.vectorIcon {
+  align-self: stretch;
+  height: 31.8px;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.reflectionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reflectionTitle {
+  font-size: 21px;
+  line-height: 161.8%;
+  font-weight: 500;
+  font-family: 'Crimson Pro';
+  color: #0d0d0d;
+}
+
+.reflectionBody {
+  font-size: 16px;
+  line-height: 161.8%;
+  font-family: Inter;
+  color: #404040;
+}
+
+@media (max-width: 640px) {
+  .reflectionRow {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
