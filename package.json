@@ -1,6 +1,6 @@
 {
-  "homepage": "https://pbsworkmail-bit.github.io/myportfolio",
-  "name": "my-portfolio",
+  "homepage": "https://github.com/pbsworkmail-bit/PraveenPortfolio.git",
+  "name": "PraveenPortfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
