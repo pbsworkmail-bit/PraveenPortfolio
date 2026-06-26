@@ -1,0 +1,203 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #faf9f5;
+  overflow-x: hidden;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Hero ── */
+@keyframes typeIn {
+  to { opacity: 1; }
+}
+
+@keyframes blink {
+  0%, 50%  { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes bioReveal {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+  min-height: calc(100vh - 64px);
+  min-height: calc(100svh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: clamp(32px, 5vh, 64px) clamp(16px, 4vw, 24px);
+}
+
+.heroName {
+  font-family: 'Crimson Pro', serif;
+  font-size: clamp(44px, 6vw, 72px);
+  font-weight: 400;
+  color: #0d0d0d;
+  line-height: 1.1;
+  margin: 0 0 clamp(16px, 2.5vh, 28px);
+}
+
+.typeChar {
+  display: inline-block;
+  opacity: 0;
+  animation: typeIn 1ms step-end both;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.8em;
+  background-color: #0d0d0d;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+  opacity: 1;
+  animation: blink 0.55s step-end 6;
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+}
+
+.heroBio {
+  font-family: Inter, sans-serif;
+  font-size: clamp(14px, 1.3vw, 16px);
+  line-height: 1.7;
+  color: #404040;
+  max-width: 480px;
+  margin: 0;
+  animation: bioReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typeChar {
+    opacity: 1;
+    animation: none;
+  }
+  .cursor,
+  .heroBio {
+    animation: none;
+  }
+}
+
+/* ── Case Study CTA ── */
+.caseStudy {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.caseStudyRow {
+  display: grid;
+  grid-template-columns: 35fr 65fr;
+  align-items: start;
+  padding: 0 clamp(20px, 4.5vw, 60px);
+  gap: clamp(20px, 3vw, 40px);
+}
+
+.caseStudyText {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.5vh, 20px);
+  padding-bottom: clamp(40px, 6vh, 80px);
+  padding-top: clamp(8px, 1vh, 16px);
+  transition: opacity 0.25s ease;
+}
+
+.caseStudy:hover .caseStudyText {
+  opacity: 0.75;
+}
+
+.caseStudyLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b0b0ac;
+  font-family: Inter, sans-serif;
+  margin: 0;
+}
+
+.caseStudyTitle {
+  font-family: 'Crimson Pro', serif;
+  font-size: clamp(20px, 2.4vw, 30px);
+  font-weight: 400;
+  color: #0d0d0d;
+  line-height: 1.25;
+  margin: 0;
+  transition: color 0.25s ease;
+}
+
+.caseStudy:hover .caseStudyTitle {
+  color: #1a1a1a;
+}
+
+.caseStudyDesc {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #404040;
+  margin: 0;
+}
+
+.caseStudyImageWrap {
+  align-self: stretch;
+  position: relative;
+  min-height: 240px;
+}
+
+.caseStudyImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  display: block;
+  border-radius: 12px 0 0 0;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.caseStudy:hover .caseStudyImage {
+  transform: scale(1.015);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .caseStudyRow {
+    grid-template-columns: 1fr;
+    padding-left: clamp(16px, 4vw, 24px);
+    padding-right: clamp(16px, 4vw, 24px);
+    gap: 24px;
+  }
+
+  .caseStudyText {
+    padding-bottom: 0;
+  }
+
+  .caseStudyImageWrap {
+    width: 100%;
+    align-self: auto;
+    height: clamp(220px, 55vw, 400px);
+    min-height: unset;
+  }
+
+  .caseStudyImage {
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: top left;
+    height: 100%;
+  }
+}
