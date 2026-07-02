@@ -24,17 +24,24 @@
   min-height: calc(100vh - 64px);
   min-height: calc(100svh - 64px);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 640px;
+  padding: clamp(32px, 5vh, 64px) clamp(20px, 4.5vw, 60px);
+}
+
+.heroContent {
+  width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: clamp(32px, 5vh, 64px) clamp(16px, 4vw, 24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .heroName {
   font-family: 'Crimson Pro', serif;
-  font-size: clamp(44px, 6vw, 72px);
+  font-size: clamp(40px, 7.5vw + 12px, 120px);
   font-weight: 400;
   color: #0d0d0d;
   line-height: 1.1;
@@ -70,7 +77,8 @@
   font-size: clamp(14px, 1.3vw, 16px);
   line-height: 1.7;
   color: #404040;
-  max-width: 480px;
+  width: 100%;
+  max-width: 866px;
   margin: 0;
   opacity: 0;
   transform: translateY(10px);
@@ -107,7 +115,7 @@
   display: grid;
   grid-template-columns: 45fr 55fr;
   align-items: center;
-  gap: clamp(32px, 5vw, 72px);
+  gap: clamp(20px, 4vw, 40px);
 }
 
 /* ── Left column ── */
@@ -129,9 +137,9 @@
 
 .caseTitle {
   font-family: 'Crimson Pro', serif;
-  font-size: clamp(28px, 4vw, 48px);
+  font-size: clamp(22px, 3.2vw, 34px);
   font-weight: 400;
-  color: #0d0d0d;
+  color: #404040;
   line-height: 1.15;
   margin: 0;
 }
@@ -170,8 +178,9 @@
 }
 
 .caseCard {
-  background-color: #e8e4de;
-  border-radius: 16px;
+  background-color: #E6E4E0;
+  border-radius: 20px;
+  padding: clamp(16px, 2.5vw, 28px) clamp(16px, 2.5vw, 28px) 0;
   overflow: hidden;
   width: 100%;
 }
@@ -180,23 +189,39 @@
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
 }
 
 /* ─────────────────────────────────────────
    Responsive
 ───────────────────────────────────────── */
 @media (max-width: 900px) {
+  .hero {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .heroName {
+    margin: 0 0 clamp(14px, 2vh, 20px);
+  }
+
   .caseInner {
     grid-template-columns: 1fr;
     gap: clamp(32px, 5vw, 48px);
   }
 
   .caseTitle {
-    font-size: clamp(26px, 5vw, 40px);
+    font-size: clamp(22px, 5vw, 34px);
   }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .caseSection {
     padding: clamp(48px, 6vh, 72px) 0 clamp(60px, 8vh, 96px);
   }

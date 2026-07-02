@@ -57,7 +57,7 @@ const DECISIONS = [
   {
     title: 'Behavioural signals, not record fields.',
     body: "Stage and close date are *lagging* and *socially gamed*. Interaction gaps, single-threading, and meeting cancellations are *leading* and harder to fabricate. *Trade-off accepted:* Signal quality degrades in low-capture environments. This created a tiered value proposition — the brief performs better for organisations with better activity capture — and required **per-deal confidence indicators** to avoid misleading reps in low-data conditions.",
-    image: 'wireframe-03.png',
+    image: 'wireframe-02.png',
     alt: 'Behavioural signals interface',
     bg: null,
     reversed: false,
@@ -66,10 +66,11 @@ const DECISIONS = [
   {
     title: 'Every flag paired with a specific executable action.',
     body: "Every competing platform studied flagged risk and left recovery to the rep. The JOLT framework (Dixon & McKenna) and Rateb et al. (2025) identified specific stage-appropriate recovery actions: multi-threading, mutual action plan reactivation, executive sponsor engagement, decision-forcing communication. ***A flag without a next step generates anxiety. A flag with a next step generates direction.*** *Trade-off accepted:* Recommended actions make assumptions about deal context that will sometimes be wrong. Override had to be frictionless — one tap — and the brief had to frame itself explicitly as a starting point, not a directive.",
-    image: 'wireframe-02.png',
+    image: 'wireframe-03.png',
     alt: 'Every flag paired with a specific executable action.',
-    bg: 'bg-03.png',
+    bg: null,
     reversed: true,
+    fullBleed: true,
   },
   {
     title: 'Factor-level explanations, not aggregate scores.',

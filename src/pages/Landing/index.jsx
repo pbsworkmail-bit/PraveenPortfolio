@@ -79,16 +79,18 @@ export default function Landing() {
 
         {/* ── Hero ── */}
         <section className={styles.hero}>
-          <h1 className={styles.heroName}>
-            <span ref={textRef} />
-            <span ref={cursorRef} className={styles.cursor} aria-hidden="true" />
-          </h1>
-          <p ref={bioRef} className={styles.heroBio}>
-            a UI/UX Designer focused on creating intuitive, scalable interfaces for enterprise SaaS platforms.
-            My work spans design systems, data dashboards, and Agentic AI experiences that blend clarity, function,
-            and emotion. Skilled in Figma, interaction design, and motion, I believe great design simplifies
-            complexity and helps users work smarter through thoughtful, consistent, and human-centered experiences.
-          </p>
+          <div className={styles.heroContent}>
+            <h1 className={styles.heroName}>
+              <span ref={textRef} />
+              <span ref={cursorRef} className={styles.cursor} aria-hidden="true" />
+            </h1>
+            <p ref={bioRef} className={styles.heroBio}>
+              a UI/UX Designer focused on creating intuitive, scalable interfaces for enterprise SaaS platforms.
+              My work spans design systems, data dashboards, and Agentic AI experiences that blend clarity, function,
+              and emotion. Skilled in Figma, interaction design, and motion, I believe great design simplifies
+              complexity and helps users work smarter through thoughtful, consistent, and human-centered experiences.
+            </p>
+          </div>
         </section>
 
         {/* ── Case Studies Section ── */}
